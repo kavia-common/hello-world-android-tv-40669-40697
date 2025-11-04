@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme for Android TV with Ocean Professional styling -->
+    <!-- API 26+ override to enable default focus highlight -->
     <style name="AppTheme" parent="Theme.Leanback">
         <!-- Colors -->
         <item name="android:colorPrimary">@color/ocean_primary</item>
@@ -13,9 +13,11 @@
 
         <!-- Typography and TV sizing -->
         <item name="android:textViewStyle">@style/OceanTextView</item>
+
+        <!-- Focus visuals (safe on API 26+) -->
+        <item name="android:defaultFocusHighlightEnabled">true</item>
     </style>
 
-    <!-- Large, TV-optimized text defaults -->
     <style name="OceanTextView" parent="@android:style/Widget.TextView">
         <item name="android:textColor">@color/ocean_text</item>
         <item name="android:textStyle">bold</item>
@@ -26,14 +28,12 @@
         <item name="android:shadowRadius">4</item>
     </style>
 
-    <!-- Specific style for the hero "Hello World" text -->
     <style name="HelloHeroText">
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">@color/ocean_primary</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
-    <!-- Subtitle styling -->
     <style name="HelloSubtitleText">
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/tv_secondary</item>
